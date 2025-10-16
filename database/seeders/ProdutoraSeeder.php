@@ -16,7 +16,9 @@ class ProdutoraSeeder extends Seeder
         DB::table('produtoras')->insert([
             ['nome' => "Salvatore Argento"],
             
-            ['nome' => "Alfred Hitchcock"]
+            ['nome' => "Alfred Hitchcock"],
+
+            ['nome' => "Copacabana Filmes"]
         ]
         );
     }

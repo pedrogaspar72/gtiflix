@@ -2,6 +2,7 @@
 
 use App\Models\Ator;
 use App\Models\Genero;
+use App\Models\FIlme;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -16,4 +17,10 @@ Route::get('/generos', function () {
 Route::get('/atores', function () {
     $ator = Ator::all();
     dd($ator);
+});
+
+Route::get('/lista-filmes', function () {
+    $filmes = Filme::all();
+    return view('lista-filmes',
+        compact('filmes'));
 });

@@ -14,6 +14,7 @@ class FilmeSeeder extends Seeder
     public function run(): void
     {
         DB::table('filmes')->insert([
+
         ['nome' => "Profondo Rosso",
         'nacionalidade_id' => 2,
         'diretor_id' => 1,
@@ -22,7 +23,12 @@ class FilmeSeeder extends Seeder
         ['nome' => 'Rope',
         'nacionalidade_id' => 3,
         'diretor_id' => 2,
-        'produtora_id' => 2]
+        'produtora_id' => 2],
+
+        ['nome' => "Deus e o Diabo na Terra do Sol",
+        'nacionalidade_id' => 1,
+        'diretor_id' => 3,
+        'produtora_id' => 3]
         ]
         );
     }
