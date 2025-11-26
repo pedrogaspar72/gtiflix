@@ -3,6 +3,8 @@
 use App\Models\Ator;
 use App\Models\Filme;
 use App\Models\Genero;
+use App\Models\Diretor;
+use App\Models\Produtora;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -48,3 +50,9 @@ Route::view('/login','login') ->name('login');
 Route::post('/logar', function (Request $request){
     dd($request);
 })->name('logar');
+
+Route::get('/lista-diretores', function() {
+    $diretores = Diretor::all();
+    return view('lista-diretores',
+        compact('diretores'));
+});
